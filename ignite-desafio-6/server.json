@@ -1,0 +1,291 @@
+{
+  "continents": [
+    {
+      "id": 1,
+      "title": "europa",
+      "name": "Europa",
+      "countries": 50,
+      "languages": 24,
+      "topCities": [
+        {
+          "name": "Londres",
+          "country": "Reino Unido",
+          "image": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/93/6a/89.jpg",
+          "flag": "http://www.bastosmaia.com.br/wp-content/uploads/2020/12/Flag-United-Kingdom.jpg"
+        },
+        {
+          "name": "Paris",
+          "country": "França",
+          "image": "https://vamospraonde.com/wp-content/uploads/2014/04/PARIS.jpeg",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/1599px-Flag_of_France.svg.png"
+        },
+        {
+          "name": "Istanbul",
+          "country": "Turquia",
+          "image": "https://www.swisslearning.com/wp-content/uploads/2021/09/menyusuri-istanbul-ibu-kota-tiga-kekaisaran-terbesar-dunia-191018r-1.jpeg",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/8/87/Flag_of_Turkey.png"
+        },
+        {
+          "name": "Roma",
+          "country": "Itália",
+          "image": "https://media.timeout.com/images/105211701/1372/772/image.jpg",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/1599px-Flag_of_Italy.svg.png"
+        },
+        {
+          "name": "Praga",
+          "country": "República Tcheca",
+          "image": "https://www.belaroundtheworld.com/wp-content/uploads/2020/05/Prague-1.jpg",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/1599px-Flag_of_the_Czech_Republic.svg.png"
+        }
+      ],
+      "image": "/images/continents/europe.jpg",
+      "description": "A Europa é, por convenção, um dos seis continentes do mundo. Compreendendo a península ocidental da Eurásia, a Europa geralmente divide-se da Ásia a leste pela divisória de águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste."
+    },
+    {
+      "id": 2,
+      "title": "africa",
+      "name": "África",
+      "countries": 54,
+      "languages": 75,
+      "topCities": [
+        {
+          "name": "Londres",
+          "country": "Reino Unido",
+          "image": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/93/6a/89.jpg",
+          "flag": "http://www.bastosmaia.com.br/wp-content/uploads/2020/12/Flag-United-Kingdom.jpg"
+        },
+        {
+          "name": "Paris",
+          "country": "França",
+          "image": "https://vamospraonde.com/wp-content/uploads/2014/04/PARIS.jpeg",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/1599px-Flag_of_France.svg.png"
+        },
+        {
+          "name": "Istanbul",
+          "country": "Turquia",
+          "image": "https://www.swisslearning.com/wp-content/uploads/2021/09/menyusuri-istanbul-ibu-kota-tiga-kekaisaran-terbesar-dunia-191018r-1.jpeg",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/8/87/Flag_of_Turkey.png"
+        },
+        {
+          "name": "Roma",
+          "country": "Itália",
+          "image": "https://media.timeout.com/images/105211701/1372/772/image.jpg",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/1599px-Flag_of_Italy.svg.png"
+        },
+        {
+          "name": "Praga",
+          "country": "República Tcheca",
+          "image": "https://www.belaroundtheworld.com/wp-content/uploads/2020/05/Prague-1.jpg",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/1599px-Flag_of_the_Czech_Republic.svg.png"
+        }
+      ],
+      "image": "/images/continents/africa.jpg",
+      "description": "A África é o terceiro continente mais extenso (depois da Ásia e da América) com cerca de 30 milhões de quilômetros quadrados, cobrindo 20,3% da área total da terra firme do planeta. É o segundo continente mais populoso da Terra (atrás da Ásia) com cerca de um bilhão de pessoas, representando cerca de um sétimo da população mundial, e 54 países independentes. "
+    },
+    {
+      "id": 3,
+      "title": "america-do-sul",
+      "name": "América do Sul",
+      "countries": 12,
+      "languages": 37,
+      "topCities": [
+        {
+          "name": "Londres",
+          "country": "Reino Unido",
+          "image": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/93/6a/89.jpg",
+          "flag": "http://www.bastosmaia.com.br/wp-content/uploads/2020/12/Flag-United-Kingdom.jpg"
+        },
+        {
+          "name": "Paris",
+          "country": "França",
+          "image": "https://vamospraonde.com/wp-content/uploads/2014/04/PARIS.jpeg",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/1599px-Flag_of_France.svg.png"
+        },
+        {
+          "name": "Istanbul",
+          "country": "Turquia",
+          "image": "https://www.swisslearning.com/wp-content/uploads/2021/09/menyusuri-istanbul-ibu-kota-tiga-kekaisaran-terbesar-dunia-191018r-1.jpeg",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/8/87/Flag_of_Turkey.png"
+        },
+        {
+          "name": "Roma",
+          "country": "Itália",
+          "image": "https://media.timeout.com/images/105211701/1372/772/image.jpg",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/1599px-Flag_of_Italy.svg.png"
+        },
+        {
+          "name": "Praga",
+          "country": "República Tcheca",
+          "image": "https://www.belaroundtheworld.com/wp-content/uploads/2020/05/Prague-1.jpg",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/1599px-Flag_of_the_Czech_Republic.svg.png"
+        }
+      ],
+      "image": "/images/continents/south-america.jpg",
+      "description": "A América do Sul é um continente que compreende a porção meridional da América. Também é considerada um subcontinente do continente americano. A sua extensão é de 17 819 100 km², abrangendo 12% da superfície terrestre e 6% da população mundial. Une-se à América Central a norte pelo istmo do Panamá e se separa da Antártida ao sul pelo estreito de Drake. Tem uma extensão de 7 500 km desde o mar do Caribe até ao cabo Horn, ponto extremo sul do continente."
+    },
+    {
+      "id": 4,
+      "title": "america-central",
+      "name": "América Central",
+      "countries": 7,
+      "languages": 6,
+      "topCities": [
+        {
+          "name": "Londres",
+          "country": "Reino Unido",
+          "image": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/93/6a/89.jpg",
+          "flag": "http://www.bastosmaia.com.br/wp-content/uploads/2020/12/Flag-United-Kingdom.jpg"
+        },
+        {
+          "name": "Paris",
+          "country": "França",
+          "image": "https://vamospraonde.com/wp-content/uploads/2014/04/PARIS.jpeg",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/1599px-Flag_of_France.svg.png"
+        },
+        {
+          "name": "Istanbul",
+          "country": "Turquia",
+          "image": "https://www.swisslearning.com/wp-content/uploads/2021/09/menyusuri-istanbul-ibu-kota-tiga-kekaisaran-terbesar-dunia-191018r-1.jpeg",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/8/87/Flag_of_Turkey.png"
+        },
+        {
+          "name": "Roma",
+          "country": "Itália",
+          "image": "https://media.timeout.com/images/105211701/1372/772/image.jpg",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/1599px-Flag_of_Italy.svg.png"
+        },
+        {
+          "name": "Praga",
+          "country": "República Tcheca",
+          "image": "https://www.belaroundtheworld.com/wp-content/uploads/2020/05/Prague-1.jpg",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/1599px-Flag_of_the_Czech_Republic.svg.png"
+        }
+      ],
+      "image": "/images/continents/central-america.jpg",
+      "description": "A América Central é uma região da América limitado ao norte pela Península de Iucatã, no México e ao sul pela Colômbia, limitado a Oeste com o Oceano Pacífico e a Leste com o Oceano Atlântico. Apesar de considerada um dos subcontinentes da América, esta região localiza-se numa placa tectónica própria: a Placa Caribeana/"
+    },
+    {
+      "id": 5,
+      "title": "america-do-norte",
+      "name": "América do Norte",
+      "countries": 3,
+      "languages": 13,
+      "topCities": [
+        {
+          "name": "Londres",
+          "country": "Reino Unido",
+          "image": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/93/6a/89.jpg",
+          "flag": "http://www.bastosmaia.com.br/wp-content/uploads/2020/12/Flag-United-Kingdom.jpg"
+        },
+        {
+          "name": "Paris",
+          "country": "França",
+          "image": "https://vamospraonde.com/wp-content/uploads/2014/04/PARIS.jpeg",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/1599px-Flag_of_France.svg.png"
+        },
+        {
+          "title": "Istanbul",
+          "country": "Turquia",
+          "image": "https://www.swisslearning.com/wp-content/uploads/2021/09/menyusuri-istanbul-ibu-kota-tiga-kekaisaran-terbesar-dunia-191018r-1.jpeg",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/8/87/Flag_of_Turkey.png"
+        },
+        {
+          "name": "Roma",
+          "country": "Itália",
+          "image": "https://media.timeout.com/images/105211701/1372/772/image.jpg",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/1599px-Flag_of_Italy.svg.png"
+        },
+        {
+          "name": "Praga",
+          "country": "República Tcheca",
+          "image": "https://www.belaroundtheworld.com/wp-content/uploads/2020/05/Prague-1.jpg",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/1599px-Flag_of_the_Czech_Republic.svg.png"
+        }
+      ],
+      "image": "/images/continents/north-america.jpg",
+      "description": "A América do Norte é um subcontinente que compreende a porção setentrional do continente americano."
+    },
+    {
+      "id": 6,
+      "title": "asia",
+      "name": "Ásia",
+      "countries": 48,
+      "languages": 2300,
+      "topCities": [
+        {
+          "name": "Londres",
+          "country": "Reino Unido",
+          "image": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/93/6a/89.jpg",
+          "flag": "http://www.bastosmaia.com.br/wp-content/uploads/2020/12/Flag-United-Kingdom.jpg"
+        },
+        {
+          "name": "Paris",
+          "country": "França",
+          "image": "https://vamospraonde.com/wp-content/uploads/2014/04/PARIS.jpeg",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/1599px-Flag_of_France.svg.png"
+        },
+        {
+          "name": "Istanbul",
+          "country": "Turquia",
+          "image": "https://www.swisslearning.com/wp-content/uploads/2021/09/menyusuri-istanbul-ibu-kota-tiga-kekaisaran-terbesar-dunia-191018r-1.jpeg",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/8/87/Flag_of_Turkey.png"
+        },
+        {
+          "name": "Roma",
+          "country": "Itália",
+          "image": "https://media.timeout.com/images/105211701/1372/772/image.jpg",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/1599px-Flag_of_Italy.svg.png"
+        },
+        {
+          "name": "Praga",
+          "country": "República Tcheca",
+          "image": "https://www.belaroundtheworld.com/wp-content/uploads/2020/05/Prague-1.jpg",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/1599px-Flag_of_the_Czech_Republic.svg.png"
+        }
+      ],
+      "image": "/images/continents/asia.jpg",
+      "description": "A Ásia é o maior dos continentes, tanto em área como em população. Abrange um terço das partes sólidas da superfície da Terra e é responsável por abrigar quase três quintos da população mundial. A Ásia faz fronteira no lado ocidental com a África e com a Europa, e no lado oriental com o oceano Pacífico, a Oceania e, em menor proporção, com a América do Norte, pelo Estreito de Bering."
+    },
+    {
+      "id": 7,
+      "title": "oceania",
+      "name": "Oceania",
+      "countries": 14,
+      "languages": 22,
+      "topCities": [
+        {
+          "name": "Londres",
+          "country": "Reino Unido",
+          "image": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/93/6a/89.jpg",
+          "flag": "http://www.bastosmaia.com.br/wp-content/uploads/2020/12/Flag-United-Kingdom.jpg"
+        },
+        {
+          "name": "Paris",
+          "country": "França",
+          "image": "https://vamospraonde.com/wp-content/uploads/2014/04/PARIS.jpeg",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/1599px-Flag_of_France.svg.png"
+        },
+        {
+          "name": "Istanbul",
+          "country": "Turquia",
+          "image": "https://www.swisslearning.com/wp-content/uploads/2021/09/menyusuri-istanbul-ibu-kota-tiga-kekaisaran-terbesar-dunia-191018r-1.jpeg",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/8/87/Flag_of_Turkey.png"
+        },
+        {
+          "name": "Roma",
+          "country": "Itália",
+          "image": "https://media.timeout.com/images/105211701/1372/772/image.jpg",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/1599px-Flag_of_Italy.svg.png"
+        },
+        {
+          "name": "Praga",
+          "country": "República Tcheca",
+          "image": "https://www.belaroundtheworld.com/wp-content/uploads/2020/05/Prague-1.jpg",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/1599px-Flag_of_the_Czech_Republic.svg.png"
+        }
+      ],
+      "image": "/images/continents/oceania.jpg",
+      "description": "Oceania ou Oceânia é uma região geográfica composta por vários grupos de ilhas do oceano Pacífico (Polinésia, Melanésia e Micronésia). O termo Oceania foi criado em 1831 pelo explorador francês Dumont d'Urville. O termo é usado hoje em vários idiomas para designar uma região geográfica e política que compreende o continente da Austrália e ilhas do Oceano Pacífico adjacentes."
+    }
+  ]
+}
