@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import { MovieCard } from "./MovieCard";
 
 import "../styles/content.scss";
@@ -23,7 +21,7 @@ interface MovieProps {
 
 export function Content(props: { genre: string; movies: MovieProps[] }) {
   const moviesList = props.movies;
-  // Complete aqui
+
   return (
     <div className="container">
       <header>

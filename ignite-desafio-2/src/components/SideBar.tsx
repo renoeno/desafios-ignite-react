@@ -12,19 +12,23 @@ interface GenreResponseProps {
   title: string;
 }
 
-export function SideBar(props: { selectGenreHandler: (id: number) => void }) {
-  const [selectedGenreId, setSelectedGenreId] = useState(1);
-  const [genres, setGenres] = useState<GenreResponseProps[]>([]);
+interface SideBarProps {
+  selectGenreHandler: (id: number) => void;
+  genres: GenreResponseProps[];
+}
 
-  useEffect(() => {
-    api.get<GenreResponseProps[]>("genres").then((response) => {
-      setGenres(response.data);
-    });
-  }, []);
+export function SideBar({ selectGenreHandler, genres }: SideBarProps) {
+  const [selectedGenreId, setSelectedGenreId] = useState(1);
+
+  // useEffect(() => {
+  //   api.get<GenreResponseProps[]>("genres").then((response) => {
+  //     setGenres(response.data);
+  //   });
+  // }, []);
 
   function handleClickButton(id: number) {
     setSelectedGenreId(id);
-    props.selectGenreHandler(id);
+    selectGenreHandler(id);
   }
 
   return (
