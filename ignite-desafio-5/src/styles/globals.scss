@@ -5,13 +5,15 @@
 }
 
 :root {
+  --gray-50: #1a1d23;
   --gray-100: #282c34;
+  --gray-150: #909090;
   --gray-200: #c4c4c4;
   --gray-300: #bbbbbb;
   --gray-500: #d7d7d7;
   --gray-900: #f8f8f8;
 
-  --magenta-500: #ff57b2;
+  --cyan-500: #40e0d0;
 }
 
 body,
@@ -23,8 +25,8 @@ button {
 }
 
 body {
-  background: var(--gray-100);
-  color: var(--gray-500);
+  background: var(--gray-800);
+  color: var(--gray-50);
 }
 
 button {
@@ -38,8 +40,18 @@ a {
 
 h1 {
   font-size: 3rem;
+
+  @media (max-width: 360px) {
+    font-size: 2rem;
+  }
 }
 
 h2 {
   font-size: 2.25rem;
+
+  @media (max-width: 360px) {
+    font-size: 1.5rem;
+
+    line-height: 2rem;
+  }
 }

@@ -8,14 +8,17 @@ import { getPrismicClient } from '../../services/prismic';
 import { AiOutlineCalendar } from 'react-icons/ai';
 import { BiTimeFive } from 'react-icons/bi';
 import { FiUser } from 'react-icons/fi';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 import { format } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 
+import { fadeInUpOp, fadeIn } from '../../animations/Animations';
+
 import styles from './post.module.scss';
 import Header from '../../components/Header';
 import { useEffect } from 'react';
-import Link from 'next/link';
 
 interface Post {
   first_publication_date: string | null;
@@ -88,25 +91,33 @@ export default function Post({
       {router.isFallback ? (
         <p>Carregando...</p>
       ) : (
-        <div className={styles.contentContainer}>
-          <div className={styles.imageContainer}>
+        <motion.div
+          exit={{ opacity: 0 }}
+          initial="initial"
+          animate="animate"
+          transition={{ duration: 1 }}
+          className={styles.contentContainer}
+        >
+          <motion.div variants={fadeIn} className={styles.imageContainer}>
             <img src={post.data.banner.url} alt="Post image" />
-          </div>
+          </motion.div>
 
-          <div className={styles.post}>
-            <h1>{post.data.title}</h1>
-            <div className={styles.postInfo}>
-              <span className={styles.infoGroup}>
-                <AiOutlineCalendar className={styles.icon} />
-                <time>{pubDate}</time>
-              </span>
-              <span className={styles.infoGroup}>
-                <FiUser className={styles.icon} />
-                <span>{post.data.author}</span>
-              </span>
-              <span className={styles.infoGroup}>
-                <BiTimeFive className={styles.icon} />4 min
-              </span>
+          <motion.div variants={fadeInUpOp} className={styles.post}>
+            <div className={styles.postHeading}>
+              <h1>{post.data.title}</h1>
+              <div className={styles.postInfo}>
+                <span className={styles.infoGroup}>
+                  <AiOutlineCalendar className={styles.icon} />
+                  <time>{pubDate}</time>
+                </span>
+                <span className={styles.infoGroup}>
+                  <FiUser className={styles.icon} />
+                  <span>{post.data.author}</span>
+                </span>
+                <span className={styles.infoGroup}>
+                  <BiTimeFive className={styles.icon} />4 min
+                </span>
+              </div>
             </div>
             {editingDate && (
               <div className={styles.editedAt}>
@@ -155,7 +166,7 @@ export default function Post({
                 )}
               </div>
             </div>
-          </div>
+          </motion.div>
 
           <div id="inject-comments-for-uterances"></div>
           {preview && (
@@ -165,7 +176,7 @@ export default function Post({
               </Link>
             </aside>
           )}
-        </div>
+        </motion.div>
       )}
     </>
   );

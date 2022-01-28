@@ -10,6 +10,10 @@
       width: 100%;
       margin: 0 auto;
     }
+
+    @media (max-width: 360px) {
+      height: 280px;
+    }
   }
 
   aside {
@@ -37,32 +41,37 @@
 
   margin: 2rem auto 4rem;
 
-  h1 {
-    color: var(--gray-900);
-    font-weight: 900;
-  }
+  .postHeading {
+    .postInfo {
+      margin-top: 1rem;
 
-  .postInfo {
-    margin-top: 1rem;
-
-    display: flex;
-    align-items: center;
-
-    color: var(--gray-300);
-    font-size: 0.8rem;
-
-    span + span {
-      margin-left: 1.5rem;
-    }
-
-    .infoGroup {
       display: flex;
       align-items: center;
-    }
 
-    .icon {
-      font-size: 1.2rem;
-      margin-right: 0.5rem;
+      color: var(--gray-50);
+      font-size: 0.8rem;
+
+      span + span {
+        margin-left: 1.5rem;
+
+        @media (max-width: 360px) {
+          margin-left: 0.5rem;
+        }
+      }
+
+      .infoGroup {
+        display: flex;
+        align-items: center;
+      }
+
+      .icon {
+        font-size: 1.2rem;
+        margin-right: 0.5rem;
+
+        @media (max-width: 360px) {
+          margin-right: 0.2rem;
+        }
+      }
     }
   }
 
@@ -70,14 +79,18 @@
     padding-top: 1rem;
     font-size: 0.8rem;
     font-style: italic;
-    color: var(--gray-300);
+    color: var(--gray-50);
+
+    @media (max-width: 360px) {
+      padding-top: 0;
+    }
   }
 
   .postContent {
     margin-top: 3rem;
 
     h2 {
-      color: var(--gray-900);
+      color: var(--gray-300);
     }
 
     p {
@@ -85,6 +98,14 @@
       line-height: 1.4rem;
       margin-top: 3rem;
       text-align: justify;
+
+      @media (max-width: 360px) {
+        margin-top: 1rem;
+      }
+    }
+
+    @media (max-width: 360px) {
+      margin-top: 1.5rem;
     }
   }
 
@@ -96,13 +117,13 @@
     padding-top: 2.5rem;
 
     .lastPost {
-      color: var(--gray-900);
+      color: var(--gray-150);
       display: flex;
       flex-direction: column;
     }
 
     .nextPost {
-      color: var(--gray-900);
+      color: var(--gray-150);
       display: flex;
       flex-direction: column;
       text-align: right;
@@ -111,7 +132,20 @@
     span + span {
       font-size: 0.9rem;
       margin-top: 0.5rem;
-      color: var(--magenta-500);
+      color: var(--cyan-500);
     }
+  }
+
+  @media (max-width: 724px) {
+    padding: 0 2.5rem;
+  }
+
+  @media (max-width: 496px) {
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 360px) {
+    line-height: 2.5rem;
+    padding: 0 1.5rem;
   }
 }

@@ -1,18 +1,21 @@
+import { useState } from 'react';
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
-import Header from '../components/Header';
-
+import { motion } from 'framer-motion';
 import { AiOutlineCalendar } from 'react-icons/ai';
 import { FiUser } from 'react-icons/fi';
-
 import { getPrismicClient } from '../services/prismic';
 import Prismic from '@prismicio/client';
 
 import { format } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 
+import Header from '../components/Header';
+import LoadingSpinner from '../components/LoadingSpinner/LoadingSpinner';
+
+import { fadeInUpOp, stagger } from '../animations/Animations';
+
 import styles from './home.module.scss';
-import { useState } from 'react';
 
 interface Post {
   uid?: string;
@@ -34,17 +37,30 @@ interface HomeProps {
   preview: boolean;
 }
 
+const delay = (ms = 1500) => new Promise(r => setTimeout(r, ms));
+
 export default function Home({ postsPagination, preview }: HomeProps) {
+  const [nextPage, setNextPage] = useState(postsPagination.next_page);
+  const [hasNextPage, setHasNextPage] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [posts, setPosts] = useState<Post[]>(postsPagination.results);
 
   const loadMorePagesHandler = async () => {
+    setIsLoading(true);
     const newPosts = [...posts];
-    const response = await fetch(postsPagination.next_page);
+    await delay();
+    const response = await fetch(nextPage);
     const data = await response.json();
+    if (data.next_page) {
+      setNextPage(data.next_page);
+    } else {
+      setHasNextPage(false);
+    }
 
     newPosts.push(...data.results);
 
     setPosts(newPosts);
+    setIsLoading(false);
 
     console.log(newPosts);
   };
@@ -53,40 +69,65 @@ export default function Home({ postsPagination, preview }: HomeProps) {
     <>
       <Header />
       <main className={styles.contentContainer}>
-        <div className={styles.posts}>
+        <motion.div
+          className={styles.posts}
+          variants={stagger}
+          exit={{ opacity: 0 }}
+          initial="initial"
+          animate="animate"
+          transition={{ duration: 0.5 }}
+        >
           {posts.map(post => {
             return (
-              <Link href={`/post/${post.uid}`} key={post.uid}>
-                <a>
-                  <strong>{post.data.title}</strong>
-                  <p>{post.data.subtitle}</p>
-                  <div className={styles.postInfo}>
-                    <AiOutlineCalendar className={styles.icon} />
-                    <time>
-                      {format(
-                        new Date(post.first_publication_date),
-                        'dd MMM yyyy',
-                        {
-                          locale: ptBR,
-                        }
-                      )}
-                    </time>
+              <motion.div
+                key={post.uid}
+                className={styles.post}
+                variants={fadeInUpOp}
+              >
+                <Link href={`/post/${post.uid}`}>
+                  <a>
+                    <strong>{post.data.title}</strong>
+                    <p>{post.data.subtitle}</p>
+                    <div className={styles.postInfo}>
+                      <AiOutlineCalendar className={styles.icon} />
+                      <time>
+                        {format(
+                          new Date(post.first_publication_date),
+                          'dd MMM yyyy',
+                          {
+                            locale: ptBR,
+                          }
+                        )}
+                      </time>
 
-                    <span className={styles.author}>
-                      <FiUser className={styles.icon} />
-                      <span> {post.data.author}</span>
-                    </span>
-                  </div>
-                </a>
-              </Link>
+                      <span className={styles.author}>
+                        <FiUser className={styles.icon} />
+                        <span> {post.data.author}</span>
+                      </span>
+                    </div>
+                  </a>
+                </Link>
+              </motion.div>
             );
           })}
-          {postsPagination.next_page && (
-            <a className={styles.loadPosts} onClick={loadMorePagesHandler}>
+          {postsPagination.next_page && !isLoading && hasNextPage && (
+            <motion.a
+              whileHover={{ color: '#008080' }}
+              variants={fadeInUpOp}
+              className={styles.loadPosts}
+              onClick={loadMorePagesHandler}
+            >
               Carregar mais posts
-            </a>
+            </motion.a>
           )}
-        </div>
+
+          {postsPagination.next_page && isLoading && (
+            <div className={styles.spinner}>
+              <LoadingSpinner />
+            </div>
+          )}
+        </motion.div>
+
         {preview && (
           <aside>
             <Link href="/api/exit-preview">
