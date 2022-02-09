@@ -6,7 +6,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "server": "json-server server.json -p 3333"
+    "server": "json-server db.json -p 3333"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.7.4",

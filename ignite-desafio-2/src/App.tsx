@@ -43,6 +43,16 @@ export function App() {
     api.get<GenreResponseProps[]>("genres").then((response) => {
       setGenres(response.data);
     });
+
+    const getBooks = async () => {
+      // await client.connect();
+      // const db = client.db("filmsDB");
+      // const booksCollection = db.collection("films");
+      // const books = await booksCollection.find().toArray();
+      // console.log(books);
+    };
+
+    getBooks();
   }, []);
 
   useEffect(() => {

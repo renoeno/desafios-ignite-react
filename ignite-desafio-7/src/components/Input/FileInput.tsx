@@ -100,14 +100,13 @@ const FileInputBase: ForwardRefRenderFunction<
       } as AxiosRequestConfig;
 
       try {
-        const response = await api.post(
-          'https://api.imgbb.com/1/upload',
-          formData,
-          config
-        );
-
-        setImageUrl(response.data.data.url);
-        setLocalImageUrl(URL.createObjectURL(event.target.files[0]));
+        // const response = await api.post(
+        //   'https://api.imgbb.com/1/upload',
+        //   formData,
+        //   config
+        // );
+        // setImageUrl(response.data.data.url);
+        // setLocalImageUrl(URL.createObjectURL(event.target.files[0]));
       } catch (err) {
         if (err?.message === 'Cancelled image upload.') return;
 

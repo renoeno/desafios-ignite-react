@@ -38,6 +38,9 @@ export default function Carousel() {
             src="/images/continents/europe.jpg"
             opacity="0.35"
             backgroundColor="black"
+            objectFit="none"
+            height="400px"
+            width="1500px"
           />
           <span>
             <Link href="/continentes/europa">
@@ -55,6 +58,9 @@ export default function Carousel() {
             src="/images/continents/africa.jpg"
             opacity="0.35"
             backgroundColor="black"
+            objectFit="none"
+            height="400px"
+            width="1500px"
           />
           <span>
             <Link href="/continentes/africa">
@@ -72,6 +78,9 @@ export default function Carousel() {
             src="/images/continents/south-america.jpg"
             opacity="0.35"
             backgroundColor="black"
+            objectFit="none"
+            height="400px"
+            width="1500px"
           />
           <span>
             <Link href="/continentes/america-do-sul">
@@ -89,6 +98,9 @@ export default function Carousel() {
             src="/images/continents/central-america.jpg"
             opacity="0.35"
             backgroundColor="black"
+            objectFit="none"
+            height="400px"
+            width="1500px"
           />
           <span>
             <Link href="/continentes/america-central">
@@ -106,6 +118,9 @@ export default function Carousel() {
             src="/images/continents/north-america.jpg"
             opacity="0.35"
             backgroundColor="black"
+            objectFit="none"
+            height="400px"
+            width="1500px"
           />
           <span>
             <Link href="/continentes/america-do-norte">
@@ -123,6 +138,9 @@ export default function Carousel() {
             src="/images/continents/asia.jpg"
             opacity="0.35"
             backgroundColor="black"
+            objectFit="none"
+            height="400px"
+            width="1500px"
           />
           <span>
             <Link href="/continentes/asia">
@@ -140,6 +158,9 @@ export default function Carousel() {
             src="/images/continents/oceania.jpg"
             opacity="0.35"
             backgroundColor="black"
+            objectFit="none"
+            height="400px"
+            width="1500px"
           />
           <span>
             <Link href="/continentes/oceania">
