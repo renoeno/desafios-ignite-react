@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
+import axios from "axios";
 
 import { SideBar } from "./components/SideBar";
 import { Content } from "./components/Content";
@@ -18,6 +19,7 @@ interface GenreResponseProps {
 
 interface MovieProps {
   imdbID: string;
+  Genre: string;
   Title: string;
   Poster: string;
   Ratings: Array<{
@@ -32,6 +34,7 @@ export function App() {
 
   const [genres, setGenres] = useState<GenreResponseProps[]>([]);
 
+  const [allMovies, setAllMovies] = useState<MovieProps[]>([]);
   const [movies, setMovies] = useState<MovieProps[]>([]);
   const [selectedGenre, setSelectedGenre] = useState<GenreResponseProps>(
     {} as GenreResponseProps
@@ -40,34 +43,43 @@ export function App() {
   // O fetch dos gêneros é feito no componente pai, evitando que toda renderização
   // da sidebar faça um fetch para pegar os dados de gêneros.
   useEffect(() => {
-    api.get<GenreResponseProps[]>("genres").then((response) => {
-      setGenres(response.data);
-    });
+    const moviesFormatted: MovieProps[] = [];
 
-    const getBooks = async () => {
-      // await client.connect();
-      // const db = client.db("filmsDB");
-      // const booksCollection = db.collection("films");
-      // const books = await booksCollection.find().toArray();
-      // console.log(books);
+    const fetchFilms = async () => {
+      const response = await api.get("films");
+
+      const filmsList = response.data.filmsList;
+      const genresList = response.data.genresList;
+
+      setAllMovies(filmsList);
+      setGenres(genresList);
     };
 
-    getBooks();
+    fetchFilms();
   }, []);
 
   useEffect(() => {
-    api
-      .get<MovieProps[]>(`movies/?Genre_id=${selectedGenreId}`)
-      .then((response) => {
-        setMovies(response.data);
-      });
+    setSelectedGenre(genres[0]);
+  }, [genres]);
 
-    api
-      .get<GenreResponseProps>(`genres/${selectedGenreId}`)
-      .then((response) => {
-        setSelectedGenre(response.data);
-      });
+  useEffect(() => {
+    const genreIndex = genres.findIndex(
+      (genre) => genre.id === selectedGenreId
+    );
+    setSelectedGenre(genres[genreIndex]);
   }, [selectedGenreId]);
+
+  useEffect(() => {
+    const filteredMovies = allMovies.filter((movie) => {
+      const movieGenre = movie.Genre.split(",")[0].toLocaleLowerCase();
+
+      if (movieGenre === selectedGenre.name) {
+        return movie;
+      }
+    });
+
+    setMovies(filteredMovies);
+  }, [selectedGenre]);
 
   const handleClickButton = useCallback((id: number) => {
     setSelectedGenreId(id);
@@ -75,9 +87,15 @@ export function App() {
 
   return (
     <div style={{ display: "flex", flexDirection: "row" }}>
-      <SideBar genres={genres} selectGenreHandler={handleClickButton} />
+      {selectedGenre ? (
+        <>
+          <SideBar genres={genres} selectGenreHandler={handleClickButton} />
 
-      <Content genre={selectedGenre.title} movies={movies} />
+          <Content genre={selectedGenre.title} movies={movies} />
+        </>
+      ) : (
+        <div>carregando...</div>
+      )}
     </div>
   );
 }
