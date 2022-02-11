@@ -27,7 +27,7 @@ export function TopCities({ topCities }: TopCitiesProps) {
         justifyContent={["center", "center", "center", "flex-start"]}
       >
         {topCities.map((topCity) => (
-          <Box marginX="1rem" marginBottom="2rem">
+          <Box key={topCity.name} marginX="1rem" marginBottom="2rem">
             <TopCity topCity={topCity} />
           </Box>
         ))}

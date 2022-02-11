@@ -31,6 +31,7 @@ export default function Carousel() {
         mousewheel={true}
         keyboard={true}
         className={styles.swiper}
+        // @ts-ignore
         style={{ "--swiper-theme-color": "#FFBA08" }}
       >
         <SwiperSlide className={styles.swiperSlide}>

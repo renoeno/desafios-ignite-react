@@ -14,6 +14,8 @@ export function ContinentBanner({ name, image }: ContinentBannerProps) {
       position={["static", "relative"]}
       alignItems="center"
       justifyContent="center"
+      backgroundSize="100%"
+      backgroundPosition="center"
     >
       <Heading
         color="gray.100"

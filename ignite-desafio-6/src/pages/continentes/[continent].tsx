@@ -52,12 +52,12 @@ export const getStaticProps: GetStaticProps<ContinentProps> = async ({
   params,
 }) => {
   const response = await api.get("continents");
-  const continents = JSON.parse(JSON.stringify(response.data)) as Continent[];
+  const continents = JSON.parse(
+    JSON.stringify(response.data.continentsList)
+  ) as Continent[];
   const continentIndex = continents.findIndex(
     (continent) => continent.title === params?.continent
   );
-
-  console.log(continents[continentIndex]);
 
   const continent = continents[continentIndex];
 
